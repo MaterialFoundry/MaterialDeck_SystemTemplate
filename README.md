@@ -9,6 +9,7 @@ Below are all the steps you need to take to edit this template.<br>
 * id: Change to a unique ID that represents the system (lower case only, no spaces)
 * title: Give the module a suitable title
 * description: Give the module a suitable description
+* version: Increment this when you make changes
 * authors: Add your personal data
 * esmodules: Change `materialdeck-template` to whatever you set the id to. For example: `./materialdeck-dnd5e.js`
 * relationships: Set the compatibility with the core Material Deck module
@@ -19,9 +20,9 @@ Below are all the steps you need to take to edit this template.<br>
 
 ### materialdeck-template.js
 * Change the name of this file to what you set it as at 'esmodules' in module.json
-* Fill in the 'data' variable
+* Fill in the [data](https://github.com/MaterialFoundry/MaterialDeck_SystemTemplate/blob/main/materialdeck-template.js#L3) variable
 
-The 'system' class describes the system. It contains all the functions that Material Deck uses.<br>
+The [system](https://github.com/MaterialFoundry/MaterialDeck_SystemTemplate/blob/main/materialdeck-template.js#L22) class describes the system. It contains all the functions that Material Deck uses.<br>
 Go through all functions and fill them in. For inspiration, take a look at how other systems do this: https://github.com/MaterialFoundry/MaterialDeck/wiki/Gaming-Systems<br>
 Not all systems will use each function. If a function is unused, leave the function empty, or call a 'return'.<br>
 
@@ -36,7 +37,7 @@ You need to give the correct workflow permissions:
 2. Go to the 'Actions/General' page
 3. Scroll down to the 'Workflow permissions' section, and tick 'Read and write permissions'
 
-Before you continue, make sure you change the filename on line 32 from `materialdeck-template.js` to whatever you named the main file.<br>
+Before you continue, make sure you change the filename on [line 32](https://github.com/MaterialFoundry/MaterialDeck_SystemTemplate/blob/main/.github/workflows/main.yml#L32) from `materialdeck-template.js` to whatever you named the main file.<br>
 <br>
 You can now head to the 'Releases' page on your GitHub repository, create a new release using the 'Draft a new release' button. Give it a tab and title and press 'Publish release'.<br>
 The action defined in .github\workflows\main.yml will now be called. This action will fill in the manifest.json with the correct data, and package the module in a .zip file. When it's done, these files will be added to your release.
